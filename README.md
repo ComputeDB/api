@@ -35,6 +35,6 @@ import Control.Monad.Aff (Aff)
 
 makeItSo :: ∀ e. Aff (con :: CONSOLE, db :: CoDB | e) Unit
 makeItSo = do
-  result <- compute "Add" {"0": 123, "1": 234}
+  result <- compute {"task": "Add", "0": 123, "1": 234}
   log $ show result -- prints 357
 ```
